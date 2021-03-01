@@ -50,7 +50,7 @@ protected:
   iterator::next_value_func_t get_iter_next_func() override;
   const_iterator::next_value_func_t get_const_iter_next_func() const override;
 
-  /// The OpenCV matrix of featrues
+  /// The OpenCV matrix of features
   cv::Mat data_;
 };
 

@@ -333,18 +333,20 @@ track_features_core
   }
 
   auto vf = curr_feat->features();
+  auto vd = curr_desc->descriptors();
 
   track_id_t next_track_id = 0;
 
   // special case for the first frame
   if( !prev_tracks )
   {
-    typedef std::vector<feature_sptr>::const_iterator feat_itr;
-    typedef descriptor_set::const_iterator desc_itr;
-    feat_itr fit = vf.begin();
-    desc_itr dit = curr_desc->cbegin();
+//    typedef std::vector<feature_sptr>::const_iterator feat_itr;
+//    typedef descriptor_set::const_iterator desc_itr;
+    auto fit = vf.begin();
+    // desc_itr dit = curr_desc->cbegin();
+    auto dit = vd.begin();
     std::vector<vital::track_sptr> new_tracks;
-    for(; fit != vf.end() && dit != curr_desc->cend(); ++fit, ++dit)
+    for(; fit != vf.end() && dit != vd.end(); ++fit, ++dit)
     {
       auto fts = std::make_shared<feature_track_state>(frame_number);
       fts->feature = *fit;
