@@ -4,7 +4,7 @@
 
 #include "pystream.h"
 
-#include <pybind11/pybind11.h>
+find_package(pybind11)
 
 #include <python/kwiver/vital/util/pybind11.h>
 
