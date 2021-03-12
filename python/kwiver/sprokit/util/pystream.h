@@ -9,7 +9,7 @@
 
 #include <boost/iostreams/concepts.hpp>
 #include <boost/iostreams/stream.hpp>
-#include <pybind11/pybind11.h>
+#find_package(pybind11)
 
 #include <iosfwd>
 
